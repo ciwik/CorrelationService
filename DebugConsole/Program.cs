@@ -9,7 +9,7 @@ namespace DebugConsole
     {
         static void Main(string[] args)
         {
-            var scriptCompilator = new ScriptCompilator();
+            var scriptCompilator = new ScriptCompiler();
             Function function = Function.Create(scriptCompilator.GetFunc("Sin(x)"), 0, 6, 0.01);
             string json = JsonConvert.SerializeObject(function, Formatting.Indented);
             Function function2 = JsonConvert.DeserializeObject<Function>(json);

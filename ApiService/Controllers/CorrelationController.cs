@@ -21,7 +21,7 @@ namespace ApiService.Controllers
             try
             {
                 var correlationCalculator = CorrelationCalculator.Create(request.Type);
-                var scriptCompilator = new ScriptCompilator();
+                var scriptCompilator = new ScriptCompiler();
 
                 var function1 = Function.Create(scriptCompilator.GetFunc(request.Function1),
                     request.LeftBorder,

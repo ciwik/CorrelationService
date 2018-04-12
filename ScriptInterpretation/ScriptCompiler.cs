@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.Scripting;
 
 namespace ScriptInterpretation
 {
-    public class ScriptCompilator
+    public class ScriptCompiler
     {
         public Func<double, double> GetFunc(string funcText)
         {
