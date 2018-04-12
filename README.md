@@ -6,8 +6,8 @@ URL: http:/<<host:port>>/api/correlation/numeric
 Content-Type: application/json  
 Type: POST  
 Body:  
-`{
-  "type": "Pearson",
+`{  
+  "type": "Pearson",  
   "function1": {
     "points": [
       {
@@ -47,7 +47,7 @@ Body:
         "y": 1.2246467991473532E-16
       }
     ]
-  },
+  },  
   "function2": {
     "points": [
       {
@@ -88,46 +88,46 @@ Body:
       }
     ]
   }
-}`
+}`  
 Response:  
-`{
-    "value": 0.1068257880599552,
-    "executionTime": 1
-}`
+`{  
+    "value": 0.1068257880599552,  
+    "executionTime": 1  
+}`  
 
 URL: http:/<<host:port>>/api/correlation/analytic  
 Content-Type: application/json  
 Type: POST  
 Body:  
-`{
-  "type": "Pearson",
-  "function1": "Cos(x)",
-  "function2": "Sin(x)",
-  "leftBorder": -3,
-  "rightBorder": 6,
-  "pointsCount": 100
-}`
+`{  
+  "type": "Pearson",  
+  "function1": "Cos(x)",  
+  "function2": "Sin(x)",  
+  "leftBorder": -3,  
+  "rightBorder": 6,  
+  "pointsCount": 100  
+}`  
 Response:  
-`{
-    "value": -0.0016290537428206339,
-    "executionTime": 50
-}`
+`{  
+    "value": -0.0016290537428206339,  
+    "executionTime": 50  
+}`  
 
 URL: http:/<<host:port>>/api/correlation/analytic  
 Content-Type: application/json  
 Type: POST  
 Body:  
-`{
-  "type": "Pearson",
-  "function1": "Pow(x)",  //error is here
-  "function2": "Sin(x)",
-  "leftBorder": -3,
-  "rightBorder": 6,
-  "pointsCount": 100
-}`
+`{  
+  "type": "Pearson",  
+  "function1": "Pow(x)",  //error is here  
+  "function2": "Sin(x)",  
+  "leftBorder": -3,  
+  "rightBorder": 6,  
+  "pointsCount": 100  
+}`  
 Response:  
-`{
-    "value": 0,
-    "executionTime": 43,
-    "error": "(1,6): error CS7036: There is no argument given that corresponds to the required formal parameter 'y' of 'Math.Pow(double, double)'"
+`{  
+    "value": 0,  
+    "executionTime": 43,  
+    "error": "(1,6): error CS7036: There is no argument given that corresponds to the required formal parameter 'y' of 'Math.Pow(double, double)'"  
 }`
