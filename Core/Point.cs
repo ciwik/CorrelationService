@@ -1,8 +1,12 @@
-﻿namespace Core
+﻿using Newtonsoft.Json;
+
+namespace Core
 {
     public struct Point
     {
+        [JsonProperty("x")]
         public double X { get; set; }
+        [JsonProperty("y")]
         public double Y { get; set; }
 
         public Point(double x, double y)

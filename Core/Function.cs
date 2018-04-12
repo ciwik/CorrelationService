@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace Core
 {
@@ -25,8 +26,23 @@ namespace Core
             }
         }
 
+        [JsonIgnore]
         public int Count => _points.Count;
+        [JsonIgnore]
         public double Average => _points.Values.Average(p => p.Y);
+
+        [JsonProperty("points")]
+        public Point[] Points {
+            get { return _points.Select(kvp => kvp.Value).ToArray(); }
+            set
+            {
+                _points = new SortedDictionary<double, Point>();
+                foreach (var point in value)
+                {
+                    _points.Add(point.X, point);
+                }
+            }
+        }
 
         public Function()
         {
