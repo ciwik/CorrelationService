@@ -1,7 +1,7 @@
 ﻿using System;
 using Core;
-using Core.Correlation;
 using Newtonsoft.Json;
+using ScriptInterpretation;
 
 namespace DebugConsole
 {
@@ -9,7 +9,8 @@ namespace DebugConsole
     {
         static void Main(string[] args)
         {
-            Function function = Function.Create(x => Math.Sin(x), 0, 6, 0.01);
+            var scriptCompilator = new ScriptCompilator();
+            Function function = Function.Create(scriptCompilator.GetFunc("Sin(x)"), 0, 6, 0.01);
             string json = JsonConvert.SerializeObject(function, Formatting.Indented);
             Function function2 = JsonConvert.DeserializeObject<Function>(json);
             Console.ReadKey();
