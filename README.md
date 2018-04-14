@@ -131,3 +131,32 @@ Response:
     "executionTime": 43,  
     "error": "(1,6): error CS7036: There is no argument given that corresponds to the required formal parameter 'y' of 'Math.Pow(double, double)'"  
 }`
+
+Build
+-----
+
+[.NET Core 2.0 SDK](https://www.microsoft.com/net/download) is required to build the project.
+Put in console next command:
+```console
+dotnet build
+```
+
+Run
+---
+
+In developer mode:
+
+```console
+ dotnet run --project ApiService
+```
+
+Test
+----
+Test Core project:
+```console
+dotnet test Core.Tests
+```
+Test ApiService project:
+```console
+dotnet test ApiService.Tests
+```
