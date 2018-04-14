@@ -1,4 +1,4 @@
-# CorrelationService
+# CorrelationService [![Build Status](https://travis-ci.org/ciwik/CorrelationService.svg?branch=master)](https://travis-ci.org/ciwik/CorrelationService)
 This WebAPI service based on ASP.NET Core can calculate Kendall and Pearson correlation coefficients. It can work with tabulated and analytic functions.
 
 ## Examples
