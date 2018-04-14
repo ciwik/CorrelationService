@@ -119,7 +119,7 @@ Type: POST
 Body:  
 `{  
   "type": "Pearson",  
-  "function1": "Pow(x)",  //error is here  
+  "function1": "Pow(x)",
   "function2": "Sin(x)",  
   "leftBorder": -3,  
   "rightBorder": 6,  
