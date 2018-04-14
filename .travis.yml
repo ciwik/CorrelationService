@@ -1,0 +1,6 @@
+language: csharp
+solution: CorrelationService.sln
+script:
+    - ./test.sh
+    - ./build.sh
+    - grep "Results" build.log
