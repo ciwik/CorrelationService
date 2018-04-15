@@ -1,0 +1,17 @@
+image:
+    - Visual Studio 2017
+    - ubuntu
+
+before_build:
+    - nuget restore
+    - dotnet restore
+
+build:
+    project: CorrelationService.sln
+    verbosity: minimal
+    configuration: Release
+    publish_aspnet_core: true
+
+test_script:
+    - dotnet test Core.Tests -c Release
+    - dotnet test ApiService.Tests -c Release
