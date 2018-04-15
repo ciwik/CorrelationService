@@ -9,7 +9,6 @@ before_build:
 build:
     project: CorrelationService.sln
     verbosity: minimal
-    configuration: Release
     publish_aspnet_core: true
 
 test_script:
