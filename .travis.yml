@@ -9,4 +9,4 @@ before_script:
 script:
     - dotnet test Core.Tests -c Release
     - dotnet test ApiService.Tests -c Release
-    - dotnet build -c Release -f netcoreapp2.0
+    - dotnet build -c Release
